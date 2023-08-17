@@ -3896,7 +3896,7 @@ public class StorageProxy implements StorageProxyMBean
             //logger.debug(encodeMatrix[coordinator_index].toString());
             String value = TreasConfig.byteToString(encodeMatrix[coordinator_index]);
 
-            logger.debug("rymDebug: sendToHintedEndpoints mutateValue size is ({}), encoded value is ({})", mutateValue.length(), value.length());
+            logger.debug("rymDebug: sendToHintedEndpoints mutateValue size is ({}), encoded value is ({}), encode matrix size is ({})", mutateValue.length(), value.length(), encodeMatrix.length);
 
             if (backPressureHosts != null)
                 MessagingService.instance().applyBackPressure(backPressureHosts, responseHandler.currentTimeout());
