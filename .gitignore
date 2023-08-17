@@ -1,5 +1,6 @@
 .gitignore
 
+conf/cassandra.yaml
 # C*
 build/
 src/gen-java/
