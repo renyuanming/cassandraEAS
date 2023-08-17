@@ -4509,7 +4509,7 @@ public class StorageProxy implements StorageProxyMBean
 
         String value = TreasConfig.byteToString(encodeMatrix[coordinator_index]);
 
-        logger.debug("rymDebug: sendToHintedEndpointsWriteBack mutateValue size is ({}), encoded value is ({})", mutateValue.length(), value.length());
+        logger.debug("rymDebug: sendToHintedEndpointsTreas mutateValue size is ({}), encoded value is ({})", mutateValue.length(), value.length());
 
 
         if (backPressureHosts != null)
