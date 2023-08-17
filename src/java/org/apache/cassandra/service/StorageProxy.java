@@ -3896,7 +3896,7 @@ public class StorageProxy implements StorageProxyMBean
             //logger.debug(encodeMatrix[coordinator_index].toString());
             String value = TreasConfig.byteToString(encodeMatrix[coordinator_index]);
 
-            logger.debug("rymDebug: mutateValue size is ({}), encoded value is ({})", mutateValue.length(), value.length());
+            logger.debug("rymDebug: sendToHintedEndpoints mutateValue size is ({}), encoded value is ({})", mutateValue.length(), value.length());
 
             if (backPressureHosts != null)
                 MessagingService.instance().applyBackPressure(backPressureHosts, responseHandler.currentTimeout());
@@ -4206,6 +4206,8 @@ public class StorageProxy implements StorageProxyMBean
             //logger.debug(encodeMatrix[coordinator_index].toString());
             String value = TreasConfig.byteToString(encodeMatrix[coordinator_index]);
 
+            logger.debug("rymDebug: sendToHintedEndpointsWriteBack mutateValue size is ({}), encoded value is ({})", mutateValue.length(), value.length());
+
             if (backPressureHosts != null)
                 MessagingService.instance().applyBackPressure(backPressureHosts, responseHandler.currentTimeout());
 
@@ -4506,6 +4508,8 @@ public class StorageProxy implements StorageProxyMBean
         int coordinator_index = addressMap.get(coordinatorAdress);
 
         String value = TreasConfig.byteToString(encodeMatrix[coordinator_index]);
+
+        logger.debug("rymDebug: sendToHintedEndpointsWriteBack mutateValue size is ({}), encoded value is ({})", mutateValue.length(), value.length());
 
 
         if (backPressureHosts != null)
