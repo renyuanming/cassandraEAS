@@ -25,9 +25,9 @@ import org.apache.cassandra.cql3.ColumnIdentifier;
 
 public class TreasConfig
 {
-    public final static int num_server = 11;
-    public final static int num_intersect = 5;
-    public final static int num_recover = 2;
+    public final static int num_server = 6;
+    public final static int num_intersect = 3;
+    public final static int num_recover = 4;
     public final static int num_concurrecy = 3;
 
     public static final String TAG_ONE  = "tag1";
@@ -43,9 +43,7 @@ public class TreasConfig
 
     //public static final String[] ADDRESSES = {"localhost/127.0.0.1"};
 
-    public static final String[] ADDRESSES = {"10.142.0.98", "10.142.0.95","10.142.0.96","10.142.0.94","10.142.0.97"
-                                                ,"10.142.0.100", "10.142.0.99", "10.142.0.102", "10.142.0.103", "10.142.0.101",
-                                              "10.142.0.104"};
+    public static final String[] ADDRESSES = {"192.168.10.21","192.168.10.22","192.168.10.23","192.168.10.25","192.168.10.26","192.168.10.28"};
 
     //public static final String[] ADDRESSES = {"10.0.0.1", "10.0.0.2","10.0.0.3","10.0.0.4","10.0.0.5"};
 

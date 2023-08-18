@@ -58,7 +58,6 @@ public class ErasureCode
         //logger.debug("The value is" + value);
         ReedSolomon reedSolomon = ReedSolomon.create(TreasConfig.num_recover, TreasConfig.num_server - TreasConfig.num_recover);
         final int valueSize =  value.length();
-        //logger.debug("Inside encodeData");
 
         // Figure out how big each shard will be.  The total size stored
         // will be the file size (8 bytes) plus the file.
@@ -66,6 +65,7 @@ public class ErasureCode
         final int shardSize = (storedSize + DATA_SHARDS - 1) / DATA_SHARDS;
 
 
+        logger.debug("rymDebug: Value size is ({}), stored size is ({}), shard size is ({})", valueSize, storedSize, shardSize);
         // Create a buffer holding the file size, followed by
         // the contents of the file.
         final int bufferSize = shardSize * DATA_SHARDS;
