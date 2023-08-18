@@ -25,7 +25,7 @@ import org.apache.cassandra.cql3.ColumnIdentifier;
 
 public class TreasConfig
 {
-    public final static int num_server = 6;
+    public final static int num_server = 6; 
     public final static int num_intersect = 3;
     public final static int num_recover = 4;
     public final static int num_concurrecy = 3;
@@ -43,7 +43,7 @@ public class TreasConfig
 
     //public static final String[] ADDRESSES = {"localhost/127.0.0.1"};
 
-    public static final String[] ADDRESSES = {"192.168.10.21","192.168.10.22","192.168.10.23","192.168.10.25","192.168.10.26","192.168.10.28"};
+    public static final String[] ADDRESSES = {"172.27.96.1","172.27.96.2","172.27.96.3","172.27.96.4","172.27.96.5","172.27.96.6"};
 
     //public static final String[] ADDRESSES = {"10.0.0.1", "10.0.0.2","10.0.0.3","10.0.0.4","10.0.0.5"};
 
