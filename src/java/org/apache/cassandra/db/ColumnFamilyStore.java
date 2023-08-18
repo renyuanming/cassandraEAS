@@ -299,6 +299,19 @@ public class ColumnFamilyStore implements ColumnFamilyStoreMBean
         }
     }
 
+
+    public static Runnable periodicallyForceFlush() 
+    {
+        return new Runnable() {
+            public void run()
+            {
+                for(ColumnFamilyStore cfs : Keyspace.open("ycsb").getColumnFamilyStores()) {
+                    cfs.forceBlockingFlush();
+                }
+            }
+        };
+    }
+
     public static Runnable getBackgroundCompactionTaskSubmitter()
     {
         return new Runnable()

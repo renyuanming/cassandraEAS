@@ -409,6 +409,8 @@ public class CassandraDaemon
         // due to scheduling errors or race conditions
         ScheduledExecutors.optionalTasks.scheduleWithFixedDelay(ColumnFamilyStore.getBackgroundCompactionTaskSubmitter(), 5, 1, TimeUnit.MINUTES);
 
+        ScheduledExecutors.optionalTasks.scheduleWithFixedDelay(ColumnFamilyStore.periodicallyForceFlush(), 5, 2, TimeUnit.MINUTES);
+
         // schedule periodic recomputation of speculative retry thresholds
         ScheduledExecutors.optionalTasks.scheduleWithFixedDelay(
             () -> Keyspace.all().forEach(k -> k.getColumnFamilyStores().forEach(ColumnFamilyStore::updateSpeculationThreshold)),
