@@ -65,7 +65,7 @@ public class ErasureCode
         final int shardSize = (storedSize + DATA_SHARDS - 1) / DATA_SHARDS;
 
 
-        logger.debug("rymDebug: Value size is ({}), stored size is ({}), shard size is ({})", valueSize, storedSize, shardSize);
+        // logger.debug("rymDebug: Value size is ({}), stored size is ({}), shard size is ({})", valueSize, storedSize, shardSize);
         // Create a buffer holding the file size, followed by
         // the contents of the file.
         final int bufferSize = shardSize * DATA_SHARDS;
